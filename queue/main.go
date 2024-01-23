@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type Node struct {
     value   int
@@ -16,12 +19,27 @@ type Queue struct {
 func main() {
     q := constructor()
     q.enqueue(10)
-    fmt.Println(q.peek())
+    val, err := q.peek()
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(val)
     q.enqueue(11)
-    fmt.Println(q.peek())
-    dequed := q.deque()
+    val, err = q.peek()
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(val)
+    dequed, err := q.deque()
+    if err != nil {
+        fmt.Println(err)
+    }
     fmt.Println("Value dequed:", dequed)
-    fmt.Println(q.peek())
+    val, err = q.peek()
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(val)
 }
 
 func constructor() *Queue {
@@ -44,19 +62,21 @@ func (q *Queue) enqueue(item int) {
     q.tail = node
 }
 
-func (q *Queue) deque() int {
+func (q *Queue) deque() (int, error) {
     if q.head == nil {
-        return q.head.value
+        return 0, errors.New("Queue is empty")
     }
-
     q.length--
     head := q.head
     q.head = q.head.next
 
     head.next = nil
-    return head.value
+    return head.value, nil
 }
 
-func (q *Queue) peek() int {
-    return q.head.value
+func (q *Queue) peek() (int, error) {
+    if q.head == nil {
+        return 0, errors.New("Queue is empty")
+    }
+    return q.head.value, nil
 }
