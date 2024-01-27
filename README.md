@@ -7,9 +7,13 @@ Algorithms:
 - Binary Search
 - Two Crystall Balls Problem Solution
 - Bubble Sort
+- Maze Solver
+- Quick Sort
 
 Data Structures:
 - Queue
+- Stack
+- Doubly Linked List
 
 ---
 
