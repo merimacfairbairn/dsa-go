@@ -9,6 +9,10 @@ Algorithms:
 - Bubble Sort
 - Maze Solver
 - Quick Sort
+- Depth-First Binary Tree Traversal
+- Depth-First Binary Tree Search
+- Breadth-First Binary Tree Traversal
+- Binary Tree Comparison
 
 Data Structures:
 - Queue
