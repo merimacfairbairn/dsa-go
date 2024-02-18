@@ -9,15 +9,24 @@ Algorithms:
 - Bubble Sort
 - Maze Solver
 - Quick Sort
-- Depth-First Binary Tree Traversal
-- Depth-First Binary Tree Search
-- Breadth-First Binary Tree Traversal
+- Traversals, Pre Order, In Order, Post Order, BFS traversals
+- BFS / DFS
+- Binary Search Tree
 - Binary Tree Comparison
+- Dijkstra Shortest Path
 
 Data Structures:
 - Queue
 - Stack
+- Array
+- Arraylist
+- Ringbuffer
 - Doubly Linked List
+- Binary Tree
+- Trie
+- Heap
+- Map
+- LRU
 
 ---
 
